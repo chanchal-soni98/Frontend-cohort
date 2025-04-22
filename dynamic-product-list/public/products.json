@@ -1,0 +1,63 @@
+[
+    {
+      "id": 1,
+      "title": "Bluetooth Speaker",
+      "price": 1500,
+      "image": "https://picsum.photos/200?1"
+    },
+    {
+      "id": 2,
+      "title": "Wireless Earbuds",
+      "price": 2499,
+      "image": "https://picsum.photos/200?2"
+    },
+    {
+      "id": 3,
+      "title": "Laptop Stand",
+      "price": 899,
+      "image": "https://picsum.photos/200?3"
+    },
+    {
+      "id": 4,
+      "title": "USB-C Hub",
+      "price": 1299,
+      "image": "https://picsum.photos/200?4"
+    },
+    {
+      "id": 5,
+      "title": "Smartwatch",
+      "price": 3499,
+      "image": "https://picsum.photos/200?5"
+    },
+    {
+      "id": 6,
+      "title": "Portable Charger",
+      "price": 1199,
+      "image": "https://picsum.photos/200?6"
+    },
+    {
+      "id": 7,
+      "title": "Noise Cancelling Headphones",
+      "price": 4999,
+      "image": "https://picsum.photos/200?7"
+    },
+    {
+      "id": 8,
+      "title": "Gaming Mouse",
+      "price": 1099,
+      "image": "https://picsum.photos/200?8"
+    },
+    {
+      "id": 9,
+      "title": "External Hard Drive",
+      "price": 3999,
+      "image": "https://picsum.photos/200?9"
+    },
+    {
+      "id": 10,
+      "title": "Webcam Full HD",
+      "price": 1499,
+      "image": "https://picsum.photos/200?10"
+    }
+  ]
+  
