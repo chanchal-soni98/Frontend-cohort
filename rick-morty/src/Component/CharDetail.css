@@ -1,0 +1,48 @@
+.char-detail-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    min-height: 100vh;
+  }
+  
+  .char-title {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #333;
+  }
+  
+
+  .char-image {
+    border-radius: 10px;
+    object-fit: cover;
+    
+  }
+  
+  .char-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    font-size: 1.1rem;
+    color: #444;
+  }
+  
+  @media (max-width: 768px) {
+    .char-card {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .char-image {
+      width: 100%;
+      max-width: 300px;
+    }
+  
+    .char-info {
+      align-items: center;
+      text-align: center;
+    }
+  }
+  
