@@ -1,11 +1,12 @@
 import React, { useState, useEffect, useMemo } from 'react';
+import { useTheme } from '../ThemeContext';
 
 export const ProductCard = () => {
   const [allProducts, setAllProducts] = useState([]);
   const [favs, setFavs] = useState([]);
   const [search, setSearch] = useState('');
   const [sortOrder, setSortOrder] = useState('');
-
+  const { theme, toggleTheme } = useTheme();
   useEffect(() => {
     fetch('/products.json')
       .then((res) => res.json())
@@ -51,7 +52,22 @@ export const ProductCard = () => {
   }, [search, sortOrder, allProducts]);
 
   return (
-    <div style={{ boxShadow: '0 2px 6px rgba(0,0,0,0.1)', textAlign: 'center' }}>
+    <div style={{ boxShadow: '0 2px 6px rgba(0,0,0,0.1)', textAlign: 'center' , background: theme === 'dark' ? '#1a1a1a' : '#fff',
+      color: theme === 'dark' ? '#f0f0f0' : '#000',}}>
+      <button
+        onClick={toggleTheme}
+        style={{
+          margin: '20px',
+          padding: '8px 16px',
+          backgroundColor: theme === 'dark' ? '#fff' : '#333',
+          color: theme === 'dark' ? '#000' : '#fff',
+          border: 'none',
+          borderRadius: '6px',
+          cursor: 'pointer'
+        }}
+      >
+        Toggle Theme
+      </button>
       <h2>Number of Favs: {favs.length}</h2>
       <input
         onChange={handleSearch}
