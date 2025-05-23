@@ -1,16 +1,22 @@
-// import './App.css'
-import FolderStructure from './components/FolderStructure'
-import explorer from './data/explorer'
+import { useState } from "react";
+import explorerData from "./data/explorer";
+import FolderStructure from "./components/FolderStructure";
+import { insertNode } from "./utils";
 
-function App() {
-  
+const App = () => {
+  const [explorer, setExplorer] = useState(explorerData);
+
+  const handleInsert = (folderId, itemName, isFolder) => {
+    const updatedTree = insertNode({ ...explorer }, folderId, itemName, isFolder);
+    setExplorer(updatedTree);
+  };
 
   return (
-    <div style={{ padding: 20 }}>
-      <h2>📂 File Explorer</h2>
-      <FolderStructure explorer={explorer} />
+    <div style={{ padding: "20px" }}>
+      <h2>📁 VS Code Folder Structure</h2>
+      <FolderStructure explorer={explorer} handleInsert={handleInsert} />
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
