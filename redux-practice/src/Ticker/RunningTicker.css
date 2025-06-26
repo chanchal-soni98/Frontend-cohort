@@ -1,0 +1,33 @@
+.ticker-container {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  background: #f0f0f0;
+  border: 1px solid #ddd;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.ticker-track {
+  display: inline-flex;
+  animation: scroll-left linear infinite;
+}
+
+.ticker-message {
+  padding: 0 2rem;
+  font-size: 1.2rem;
+  color: #333;
+  white-space: nowrap;
+}
+
+/* Animation */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
